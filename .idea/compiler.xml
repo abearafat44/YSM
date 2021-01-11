@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="YsmLatest" />
+        <module name="YSMSample" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="YSMSample" target="14" />
+    </bytecodeTargetLevel>
   </component>
 </project>

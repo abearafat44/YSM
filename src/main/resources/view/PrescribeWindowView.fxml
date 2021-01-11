@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PrescribeWindowController">
+   <children>
+      <Rectangle fill="#dcf0fc" height="422.0" layoutX="511.0" layoutY="136.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="415.0" />
+      <Rectangle fill="#dadada" height="47.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="980.0" />
+      <ImageView fx:id="logo" fitHeight="47.0" fitWidth="148.0" onMouseClicked="#mainMenu" />
+      <Text layoutX="207.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;">
+         <font>
+            <Font name="Helvetica Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="228.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prescribe">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="68.0" layoutY="264.0" prefHeight="103.0" prefWidth="321.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="103.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="218.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lot number">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Amount" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="lotField" GridPane.columnIndex="1" />
+            <TextField fx:id="amountField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="prescribeButton" onAction="#prescribeAndExit" layoutX="119.0" layoutY="383.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="244.0" text="Prescribe" />
+      <Text fx:id="nameStrengthText" layoutX="550.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="547.0" layoutY="216.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type:">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Text>
+            <Label fx:id="typeLabel" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="descriptionLabel" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <TableView fx:id="lotsTable" layoutX="547.0" layoutY="305.0" prefHeight="211.0" prefWidth="342.0">
+        <columns>
+          <TableColumn fx:id="lotColumn" prefWidth="128.0" text="Lot number" />
+          <TableColumn fx:id="packedColumn" prefWidth="105.0" text="Packed stock" />
+            <TableColumn fx:id="expiryColumn" prefWidth="108.0" text="Expiry" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="prescribeIcon" fitHeight="120.0" fitWidth="120.0" layoutX="181.0" layoutY="95.0" />
+      <ImageView fx:id="infoIcon" fitHeight="53.0" fitWidth="53.0" layoutX="485.0" layoutY="110.0" />
+      <Hyperlink focusTraversable="false" layoutX="148.0" layoutY="11.0" onAction="#mainMenu" text="Home">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

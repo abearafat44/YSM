@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="YSMSample">
+    <output-path>$PROJECT_DIR$/out/artifacts/YSMSample</output-path>
+    <root id="root">
+      <element id="archive" name="YSMSample.jar">
+        <element id="module-output" name="YSMSample" />
+      </element>
+    </root>
+  </artifact>
+</component>
